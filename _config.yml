@@ -4,7 +4,7 @@ header-img: img/home-bg.jpg
 email: your-email@yourdomain.com
 copyright_name: Oleg Komarov's Blog
 description: "Oleg Komarov's blog"
-baseurl: "/startbootstrap-clean-blog-jekyll"
+baseurl: "/"
 url: "http://okomarov.github.io"
 twitter_username: 
 github_username:  okomarov
