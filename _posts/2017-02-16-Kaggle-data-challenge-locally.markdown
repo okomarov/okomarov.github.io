@@ -8,9 +8,9 @@ header-img: "img/post-bg-01.png"
 ---
 This is a story of hardhsips of software development in windows. Maybe one day I will have convinced myself that games are not worth over having a *nix OS. So far, I hit my head already a few times, and I might blog about it sometime, but here is another one of these sotires of fights. Or maybe one day ill meet a windows developer and he'll tell me how it's done, or maybe that dev is already staring at me in from the mirror. Anyways, here is a simple problem. 
 
-To run kaggle data challenge with kaggle gym locally
-
-clone https://github.com/Giqles/kagglegym and execute instruction with caveats for:
+To run the Two Sigma Financial Modeling Challenge locally on Windows 7 you will need the Docker Toolbox v1.12.3.[^1] 
+[^1]: The exact version is fundamental.
+Once installed the toolbox, you will need [Kaggle's Python Docker container](https://github.com/Kaggle/docker-python) extended with their implementation of the [OpenAI's Gym](https://gym.openai.com/docs). Luckily, someone has done that for us and it is enough to clone [Gigles/kagglegym](https://github.com/Giqles/kagglegym) and execute instruction with caveats for:
 
 winpty docker run -it -v "$(pwd)/wd" -p 8888:8888 kagglegym jupyter notebook --port=8888 --ip=0.0.0.0
 docker run -td -v "$(PWD)/wd" -p 8888:8888 kagglegym jupyter notebook --port=8888 --ip=0.0.0.0
