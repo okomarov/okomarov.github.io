@@ -15,6 +15,15 @@ email_username:  your-email@yourdomain.com
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
 # google_tracking_id:
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: drafts
+    values:
+      layout: draft
+
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -24,16 +33,7 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
 
-
 # Public drafts
 collections:
   drafts:
     output: true
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: drafts
-    values:
-      layout: draft

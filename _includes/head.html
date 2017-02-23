@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
 
-    {% if page.meta_robots %}    
-    <meta name="robots" content="{{ page.meta_robots }}">
-    {% elsif layout.meta_robots %}
-    <meta name="robots" content="{{ layout.meta_robots }}">
-    {% else %}
-    <meta name="robots" content="all">
-    {% endif %}
-    
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if page.meta_robots %}<meta name="robots" content="{{ page.meta_robots }}">
+    {% elsif layout.meta_robots %}<meta name="robots" content="{{ layout.meta_robots }}">
+    {% else %}<meta name="robots" content="all">{% endif %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
