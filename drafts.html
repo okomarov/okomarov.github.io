@@ -19,12 +19,11 @@ meta_robots:  noindex
 </div>
  -->
 
-{% assign sorted = (site.drafts | sort: 'date') | reverse %}
-{% for draft in sorted %}
 <div class="post-preview">
+	{% assign sorted = (site.drafts | sort: 'date') | reverse %}	
+	{% for draft in sorted %
     <a href="{{ draft.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ draft.title }}
-        </h2>
+        <h2 class="post-title">{{ draft.title }}</h2>
         {% if draft.subtitle %}
         <h3 class="post-subtitle">
             {{ draft.subtitle }}
