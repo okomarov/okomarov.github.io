@@ -23,3 +23,17 @@ paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
+
+
+# Public drafts
+collections:
+  drafts:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: drafts
+    values:
+      layout: draft
